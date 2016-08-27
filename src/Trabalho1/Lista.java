@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Trabalho1;
 
 /**
@@ -18,5 +14,19 @@ public class Lista {
         }
     }
     
+    public float calculaNotaF(String turma){
+        float nft = 0;
+        int j = 0;
+        for (int i = 0; i < alunos.length; i++) {
+            if(turma.equals(alunos[i].getTurma())){
+                float aux = alunos[i].getNf();
+                nft = nft+aux;
+                j++;
+            }
+            nft= nft/j;
+            return nft;
+        }
+        return 0;
+    }
     
 }

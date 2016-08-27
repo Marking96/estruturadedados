@@ -9,7 +9,10 @@ public class Aluno {
     private String nome;
     private String matricula;
     private String turma;
-    private float p1,p2,p3,nf;
+    private float p1;
+    private float p2;
+    private float p3;
+    private float nf;
 
     public Aluno (){
         
@@ -81,20 +84,8 @@ public class Aluno {
     }
     
     
-    public float getNotaf(float nota1, float nota2, float nota3){
-        this.nf = nota1 + nota2+nota3/3;
-        return this.nf;
-    }
-    /*public float notaFinal(Aluno a, float nota1, float nota2, float nota3){
-        float notaf;
-        
-        return notaf;
-            
-    }*/
-    
-    public void add(Aluno a){
-        Aluno aluno = new Aluno();
-       
-    }
-    
+    public float notafinal(){
+        this.nf = this.p1 + this.p2+this.p3;
+        return nf/3;
+    }   
 }
