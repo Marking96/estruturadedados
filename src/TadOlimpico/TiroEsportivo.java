@@ -11,6 +11,9 @@ public class TiroEsportivo {
     private int tiros;
     private String modo;
     private Atleta atleta;
+
+    public TiroEsportivo() {
+    }
     
     
 
@@ -101,9 +104,14 @@ public class TiroEsportivo {
         }
     }
     
+    
+    
+    
     public void imprimir(){
         System.out.println("Modo: "+getModo());
         System.out.println("Arma: "+getArma());
-        System.out.println("");
+        System.out.println("Distância: "+getDistancia());
+        System.out.println("Tiros: "+getTiros());
+        System.out.println("Alteta: "+getAtleta().getNome());
     }
 }
