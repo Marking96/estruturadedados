@@ -9,6 +9,15 @@ public class Atleta {
     private String Nome;
     private String delegacao;
     private char sexo;
+    private int pontuacao;
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
+    }
 
     public Atleta() {
     }
