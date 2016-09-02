@@ -15,14 +15,18 @@ public class ListaArranjo {
         this.item = new Object[this.tamanho];
     }
     
-    public boolean add(Object o){
+    public void add(Object o){
         if(ultimo < tamanho){
             item[ultimo] = o;
             ultimo++;
-            return true;
+        }else{
+            capacidade();
+            item[ultimo] = o;
+            ultimo++;
         }
-        return false;
+        
     }
+    
     public Object remove(Object o){
         Object aux = null;
         for (int i = 0; i < ultimo; i++) {
@@ -36,5 +40,27 @@ public class ListaArranjo {
         }
         ultimo = ultimo -1;
         return aux;
+    }
+    
+    public boolean search(Object o){
+        for (int i = 0; i < ultimo; i++) {
+            if(o.equals(item[i])){
+                return true;
+            }   
+        }
+        return false;
+        
+    }
+    
+    public void capacidade(){
+        Object aux[] = new Object[tamanho*2];
+        for (int i = 0; i < ultimo; i++) {
+            aux[i] = item[i];
+        }
+        item = aux;
+    }
+    
+    public Object remove(int posicao){
+        return remove(item[posicao]);
     }
 }
