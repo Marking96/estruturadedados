@@ -1,6 +1,8 @@
 
 package Arranjo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author marking
@@ -71,20 +73,24 @@ public class ListaArranjo {
     
     //Algoritimo improvisado 
     public void removeplus(Object o){
-        int cont = 0;                               //Contador para quantas vezes o item tá na lista.
-        int[] pos = new int[10];                    //array para armazena as posições
+        int cont = 0;                                                   //Contador para quantas vezes o item tá na lista.
+        int[] pos = new int[10];                                        //array para armazena as posições
         for (int i = 0; i < ultimo; i++) {
-            if (o.equals(item[i])) {                //procurando item.
-                pos[cont] = i;                      //armazenando posições
-                cont++;                             //imclementando o contador
+            if (o.equals(item[i])) {                                    //procurando item.
+                pos[cont] = i;                                          //armazenando posições
+                cont++;                                                 //imclementando o contador
             }
         }
-        if (cont > 1) {                             //se o contador for maior que 1
+        if (cont > 1) {                                                 //se o contador for maior que 1
             System.out.println("O mesmo item foi encontrado mais de uma vez");
-            System.out.println("nas Posições: ");
+            System.out.println("nas Posições/item: ");
             for (int i = 0; i < cont; i++) {
-                System.out.print(pos[i]+" ");       //imprime todas as posições onde o item foi encontrado na lista.
+                System.out.println(pos[i]+" / "+item[pos[i]]);          //imprime todas as posições e o item encontrado na lista.
             }
+            System.out.println("qual posição deseja remover: ");       
+            Scanner retP = new Scanner(System.in);                     //ler a posição que deseja remover.
+            int posi = retP.nextInt();
+            remove(posi);
         }
         
     }
