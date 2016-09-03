@@ -30,7 +30,7 @@ public class ListaArranjo {
     public Object remove(Object o){
         Object aux = null;
         for (int i = 0; i < ultimo; i++) {
-            if(item[i].equals(o)){
+            if(o.equals(item[i])){
                 aux = item[i];
                 for (int j = i; j < ultimo; j++) {
                     item[j] = item[j+1];
@@ -62,5 +62,14 @@ public class ListaArranjo {
     
     public Object remove(int posicao){
         return remove(item[posicao]);
+    }
+    
+    
+    
+    public void imprimi(){
+        for (int i = 0; i < ultimo; i++) {
+            System.out.println(item[i]);
+            System.out.println("-----------");
+        }
     }
 }
