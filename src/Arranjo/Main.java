@@ -28,11 +28,11 @@ public class Main {
         l.add(a);
         l.imprimi();
         
-        //System.out.println("removido "+l.remove(a1));
-        //l.imprimi();
-        //
-        //System.out.println("removido "+l.remove(2));
-        //l.imprimi();
+        System.out.println("removido "+l.remove(a1));
+        l.imprimi();
+        
+        System.out.println("removido "+l.remove(2));
+        l.imprimi();
         
         l.removeplus(a);
     }

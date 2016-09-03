@@ -15,6 +15,7 @@ public class ListaArranjo {
         this.item = new Object[this.tamanho];
     }
     
+    //Adicionando item a lista
     public void add(Object o){
         if(ultimo < tamanho){
             item[ultimo] = o;
@@ -27,6 +28,7 @@ public class ListaArranjo {
         
     }
     
+    //removendo item
     public Object remove(Object o){
         Object aux = null;
         for (int i = 0; i < ultimo; i++) {
@@ -42,6 +44,7 @@ public class ListaArranjo {
         return aux;
     }
     
+    //procuando o item na lista
     public boolean search(Object o){
         for (int i = 0; i < ultimo; i++) {
             if(o.equals(item[i])){
@@ -52,6 +55,7 @@ public class ListaArranjo {
         
     }
     
+    //doblando o tamanho da lista
     public void capacidade(){
         Object aux[] = new Object[tamanho*2];
         for (int i = 0; i < ultimo; i++) {
@@ -60,9 +64,11 @@ public class ListaArranjo {
         item = aux;
     }
     
+    //removendo por posição
     public Object remove(int posicao){
         return remove(item[posicao]);
     }
+    
     //Algoritimo improvisado 
     public void removeplus(Object o){
         int cont = 0;                               //Contador para quantas vezes o item tá na lista.
@@ -83,6 +89,7 @@ public class ListaArranjo {
         
     }
     
+    //algoritimo para imprimir
     public void imprimi(){
         for (int i = 0; i < ultimo; i++) {
             System.out.println(item[i]);
