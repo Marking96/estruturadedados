@@ -63,8 +63,25 @@ public class ListaArranjo {
     public Object remove(int posicao){
         return remove(item[posicao]);
     }
-    
-    
+    //Algoritimo improvisado 
+    public void removeplus(Object o){
+        int cont = 0;                               //Contador para quantas vezes o item tá na lista.
+        int[] pos = new int[10];                    //array para armazena as posições
+        for (int i = 0; i < ultimo; i++) {
+            if (o.equals(item[i])) {                //procurando item.
+                pos[cont] = i;                      //armazenando posições
+                cont++;                             //imclementando o contador
+            }
+        }
+        if (cont > 1) {                             //se o contador for maior que 1
+            System.out.println("O mesmo item foi encontrado mais de uma vez");
+            System.out.println("nas Posições: ");
+            for (int i = 0; i < cont; i++) {
+                System.out.print(pos[i]+" ");       //imprime todas as posições onde o item foi encontrado na lista.
+            }
+        }
+        
+    }
     
     public void imprimi(){
         for (int i = 0; i < ultimo; i++) {

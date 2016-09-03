@@ -20,18 +20,20 @@ public class Main {
         a1 = "Brou";
         a2 = "Marcos";
         a3 = "Yuri";
+        
         l.add(a);
         l.add(a1);
         l.add(a2);
         l.add(a3);
-        
+        l.add(a);
         l.imprimi();
         
-        l.remove(a1);
-        l.imprimi();
+        //System.out.println("removido "+l.remove(a1));
+        //l.imprimi();
+        //
+        //System.out.println("removido "+l.remove(2));
+        //l.imprimi();
         
-        l.remove(2);
-        l.imprimi();
-        
+        l.removeplus(a);
     }
 }
