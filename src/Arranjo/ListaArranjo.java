@@ -81,6 +81,7 @@ public class ListaArranjo {
         item = aux;
     }
     
+    //Algoritimo para reduzir tamanho da lista.
     public void reduzirCapacidade(){
         this.tamanho = (int) (tamanho*0.75);
         Object aux[] = new Object[tamanho];
@@ -100,6 +101,9 @@ public class ListaArranjo {
                 }
                 item[ultimo-1] = null;
                 ultimo--;
+                if(ultimo <= tamanho/2){
+                    reduzirCapacidade();
+                }
             }
         }
         return aux;
