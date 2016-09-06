@@ -17,6 +17,15 @@ public class ListaArranjo {
         this.item = new Object[this.tamanho];
     }
     
+    //Algoritimo para verificar se a lista esta vazia.
+    public boolean isEmpty(){
+        if(ultimo == 0){
+            return true;
+        }else{
+           return false; 
+        }    
+    }
+    
     //Adicionando item a lista
     public void add(Object o){
         if(ultimo < tamanho){
@@ -73,7 +82,7 @@ public class ListaArranjo {
     //removendo por posição
     public Object remove(int posicao){
         Object aux = null;
-        for (int i = 0; i < ultimo; i++) {
+        for (int i = 0; i < ultimo-1; i++) {
             if(posicao == i){
                 aux = item[i];
                 for (int j = i; j < ultimo-1; j++) {
