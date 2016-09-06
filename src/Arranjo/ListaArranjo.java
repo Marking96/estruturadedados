@@ -43,7 +43,7 @@ public class ListaArranjo {
                 ultimo--;
                 
                 
-                //break;                    para remover o primeiro item, caso tenha mais de um igual.
+                //break;                    //para remover o primeiro item, caso tenha mais de um igual.
             }
         }
         return aux;

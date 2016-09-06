@@ -36,7 +36,7 @@ public class Main {
         System.out.println(l.size());
         
         //System.out.println("removido "+l.remove(a1));
-        //l.imprimi();
+        l.imprimi();
         //
         //System.out.println("removido "+l.remove(2));
         //l.imprimi();
