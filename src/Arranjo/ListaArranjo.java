@@ -38,6 +38,27 @@ public class ListaArranjo {
         }
         
     }
+    //Algoritimo para adicinar elemento em uma determinada posição.
+    public boolean add(Object o,int p){
+       if(p<0 || p>tamanho ){
+           return false;
+       }
+       if(ultimo == tamanho){
+            capacidade();
+       }
+       Object aux[] =  new Object[this.tamanho];
+       for(int i=0;i<ultimo;i++){
+            aux[i]=this.item[i];
+       }
+       item = aux;
+       for(int i=ultimo; i>p;i--){
+           item[i] = item[i-1];
+       }
+       ultimo = ultimo+1;
+       item[p] = o;
+       return true;
+       
+    }
     
     //removendo item
     public Object remove(Object o){

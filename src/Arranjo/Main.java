@@ -27,6 +27,7 @@ public class Main {
         l.add(a3);
         l.add(a);
         l.add(a2);
+        l.add(a3, 3);
         //l.imprimi();
         System.out.println(l.size());
          
