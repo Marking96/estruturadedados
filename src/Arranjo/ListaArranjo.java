@@ -134,7 +134,7 @@ public class ListaArranjo {
     }
     //Algoritimo para retorna tamanho da lista
     public int size(){
-        return item.length;
+        return this.tamanho;
     }
     
     //algoritimo para imprimir
