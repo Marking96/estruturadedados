@@ -50,7 +50,9 @@ public class ListaArranjo {
                 }
                 item[ultimo-1] = null;
                 ultimo--;
-                
+                if(ultimo <= tamanho/2){
+                    reduzirCapacidade();
+                }
                 
                 //break;                    //para remover o primeiro item, caso tenha mais de um igual.
             }
@@ -79,6 +81,14 @@ public class ListaArranjo {
         item = aux;
     }
     
+    public void reduzirCapacidade(){
+        this.tamanho = (int) (tamanho*0.75);
+        Object aux[] = new Object[tamanho];
+        for (int i = 0; i < ultimo; i++) {
+            aux[i] = item[i];
+        }
+        item= aux;
+    }
     //removendo por posição
     public Object remove(int posicao){
         Object aux = null;

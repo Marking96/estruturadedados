@@ -28,19 +28,25 @@ public class Main {
         l.add(a);
         l.add(a2);
         //l.imprimi();
-        //
-        //l.remove(0);
-        //
-        //l.imprimi();
-        
         System.out.println(l.size());
+        /* 
+        l.remove(0);
         
-        //System.out.println("removido "+l.remove(a1));
         l.imprimi();
-        //
-        //System.out.println("removido "+l.remove(2));
-        //l.imprimi();
-        //
-        //l.removeplus(a);
+        
+        l.remove(a);
+        l.remove(a1);
+        l.remove(a2);
+        
+        System.out.println("removido "+l.remove(a1));
+        */
+        l.imprimi();
+        /*
+        
+        System.out.println("removido "+l.remove(2));
+        l.imprimi();
+        System.out.println(l.size());
+        l.removeplus(a);
+        */
     }
 }
