@@ -33,22 +33,26 @@ public class ListaArranjo {
     //removendo item
     public Object remove(Object o){
         Object aux = null;
-        for (int i = 0; i < ultimo; i++) {
+        for (int i = 0; i < ultimo-1; i++) {
             if(o.equals(item[i])){
                 aux = item[i];
-                for (int j = i; j < ultimo; j++) {
+                for (int j = i; j < ultimo-1; j++) {
                     item[j] = item[j+1];
                 }
                 item[ultimo-1] = null;
+                ultimo--;
+                
+                
+                //break;                    para remover o primeiro item, caso tenha mais de um igual.
             }
         }
-        ultimo = ultimo -1;
         return aux;
+        
     }
     
     //procuando o item na lista
     public boolean search(Object o){
-        for (int i = 0; i < ultimo; i++) {
+        for (int i = 0; i < ultimo-1; i++) {
             if(o.equals(item[i])){
                 return true;
             }   
@@ -68,7 +72,18 @@ public class ListaArranjo {
     
     //removendo por posição
     public Object remove(int posicao){
-        return remove(item[posicao]);
+        Object aux = null;
+        for (int i = 0; i < ultimo; i++) {
+            if(posicao == i){
+                aux = item[i];
+                for (int j = i; j < ultimo-1; j++) {
+                    item[j] = item[j+1];
+                }
+                item[ultimo-1] = null;
+                ultimo--;
+            }
+        }
+        return aux;
     }
     
     //Algoritimo improvisado 
@@ -94,12 +109,17 @@ public class ListaArranjo {
         }
         
     }
+    //Algoritimo para retorna tamanho da lista
+    public int size(){
+        return item.length;
+    }
     
     //algoritimo para imprimir
     public void imprimi(){
         for (int i = 0; i < ultimo; i++) {
             System.out.println(item[i]);
             System.out.println("-----------");
+           
         }
     }
 }

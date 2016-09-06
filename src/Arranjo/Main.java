@@ -9,12 +9,12 @@ import Trabalho1.Aluno;
  */
 public class Main {
     public static void main(String[] args) {
-        String a = new String();
-        String a1 = new String();
-        String a2 = new String();
-        String a3 = new String();
+        String a;
+        String a1;
+        String a2;
+        String a3;
         
-        ListaArranjo l = new ListaArranjo(10);
+        ListaArranjo l = new ListaArranjo(6);
         
         a = "Atelus";
         a1 = "Brou";
@@ -26,14 +26,21 @@ public class Main {
         l.add(a2);
         l.add(a3);
         l.add(a);
-        l.imprimi();
+        l.add(a2);
+        //l.imprimi();
+        //
+        //l.remove(0);
+        //
+        //l.imprimi();
         
-        System.out.println("removido "+l.remove(a1));
-        l.imprimi();
+        System.out.println(l.size());
         
-        System.out.println("removido "+l.remove(2));
-        l.imprimi();
-        
-        l.removeplus(a);
+        //System.out.println("removido "+l.remove(a1));
+        //l.imprimi();
+        //
+        //System.out.println("removido "+l.remove(2));
+        //l.imprimi();
+        //
+        //l.removeplus(a);
     }
 }
