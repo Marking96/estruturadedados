@@ -54,7 +54,7 @@ public class ListaArranjo {
                     reduzirCapacidade();
                 }
                 
-                //break;                    //para remover o primeiro item, caso tenha mais de um igual.
+                break;                    //para remover o primeiro item, caso tenha mais de um igual.
             }
         }
         return aux;
@@ -84,11 +84,7 @@ public class ListaArranjo {
     //Algoritimo para reduzir tamanho da lista.
     public void reduzirCapacidade(){
         this.tamanho = (int) (tamanho*0.75);
-        Object aux[] = new Object[tamanho];
-        for (int i = 0; i < ultimo; i++) {
-            aux[i] = item[i];
-        }
-        item= aux;
+        
     }
     //removendo por posição
     public Object remove(int posicao){
