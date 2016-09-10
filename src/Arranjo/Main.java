@@ -1,6 +1,8 @@
 
 package Arranjo;
 
+import Encadeada.ListaEncadeada;
+
 
 
 /**
@@ -14,7 +16,8 @@ public class Main {
         String a2;
         String a3;
         
-        ListaArranjo l = new ListaArranjo(6);
+        //ListaArranjo l = new ListaArranjo(6);
+        ListaEncadeada l = new ListaEncadeada();
         
         a = "Atelus";
         a1 = "Brou";
@@ -36,8 +39,8 @@ public class Main {
         l.imprimi();
         
         l.remove(a);
-        l.remove(a1);
-        l.remove(a2);
+        //l.remove(a1);
+        //l.remove(a2);
         
         System.out.println(l.size());
         /*System.out.println("removido "+l.remove(a1));
