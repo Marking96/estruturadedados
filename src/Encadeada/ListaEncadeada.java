@@ -5,7 +5,7 @@ package Encadeada;
  *
  * @author marking
  */
-public class ListaEncadeada {
+public class ListaEncadeada<E> {
     Celula primeiro;
     Celula ultimo;
 
@@ -15,7 +15,7 @@ public class ListaEncadeada {
     }
     
     //Algoritimo para adicionar item na lista.
-    public void add(Object o){
+    public void add(E o){
         ultimo.proxima = new Celula();
         ultimo = ultimo.proxima;
         ultimo.item = o;
@@ -23,7 +23,7 @@ public class ListaEncadeada {
     }
     
     //Algoritimo para adicionar item em determinada posição.
-    public void add(Object o,int posicao){
+    public void add(E o,int posicao){
         Celula aux = primeiro;
         for (int i = 0; i < posicao; i++) {
             aux = aux.proxima;
@@ -36,13 +36,13 @@ public class ListaEncadeada {
     
     
     //Algoritimo para remover o item na lista.
-    public Object remove(Object o){
+    public E remove(E o){
         Celula aux = primeiro;
         while(aux.proxima != null && !aux.proxima.item.equals(o)){
             aux = aux.proxima;
         }
         if(aux.proxima != null){
-            Object remove = aux.proxima.item;
+            E remove = (E) aux.proxima.item;
             aux.proxima = aux.proxima.proxima;
             return remove;
         }
@@ -53,12 +53,12 @@ public class ListaEncadeada {
     }
     
     //Algoritimo para remover um item na determinada posição.
-    public Object remove(int posicao){
+    public E remove(int posicao){
        Celula aux = primeiro;
        int i = -1;
        while(aux.proxima != null && i< posicao){
            if((i+1) == posicao){
-               Object remove = aux.proxima.item;
+               E remove = (E) aux.proxima.item;
                aux.proxima = aux.proxima.proxima;
                return remove;
            }else{
@@ -71,7 +71,7 @@ public class ListaEncadeada {
     } 
     
     //Algoritimo para procura um item na lista
-    public boolean search(Object o){
+    public boolean search(E o){
         Celula aux = primeiro;
         while(aux.proxima != null){
             if(aux.proxima.item.equals(o)){
@@ -104,7 +104,7 @@ public class ListaEncadeada {
     }
     
     //Algoritimo para exibir itens da lista.
-    public void imprimi(){
+    public void imprimir(){
         Celula aux = new Celula();
         aux = primeiro;
         while(aux.proxima != null){

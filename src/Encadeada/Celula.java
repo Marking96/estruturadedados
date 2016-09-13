@@ -5,7 +5,7 @@ package Encadeada;
  *
  * @author marking
  */
-public class Celula {
-    Object item;
+public class Celula<E> {
+    E item;
     Celula proxima;
 }

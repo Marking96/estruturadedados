@@ -46,7 +46,7 @@ public class Main {
          
         //l.remove(0);
         
-        l.imprimi();
+        l.imprimir();
         
         l.remove(a);
         //l.remove(a1);
