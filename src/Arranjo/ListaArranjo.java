@@ -155,7 +155,7 @@ public class ListaArranjo {
     }
     
     //algoritimo para imprimir
-    public void imprimi(){
+    public void imprimir(){
         for (int i = 0; i < ultimo; i++) {
             System.out.println(item[i]);
             System.out.println("-----------");
