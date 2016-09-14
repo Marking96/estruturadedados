@@ -41,8 +41,12 @@ public class Main {
         l.add(a);
         l.add(a2);
         l.add(a3, 3);
-        //l.imprimi();
-        System.out.println(l.size());
+        l.imprimir();
+        l.add(a1, 1);
+        
+        
+        System.out.println(l.search(a1));
+        
          
         //l.remove(0);
         
@@ -52,7 +56,7 @@ public class Main {
         //l.remove(a1);
         //l.remove(a2);
         
-        System.out.println(l.size());
+        //System.out.println(l.size());
         /*System.out.println("removido "+l.remove(a1));
         */
         //l.imprimi();

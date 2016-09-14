@@ -25,15 +25,16 @@ public class ListaEncadeada<E> {
     //Algoritimo para adicionar item em determinada posição.
     public void add(E o,int posicao){
         Celula aux = primeiro;
-        for (int i = 0; i < posicao; i++) {
-            aux = aux.proxima;
+        if(posicao<=size()){
+            for (int i = 0; i < posicao; i++) {
+                aux = aux.proxima;
+            }
+            Celula aux2 = aux.proxima;
+            aux.proxima = new Celula();
+            aux.proxima.item = o;
+            aux.proxima.proxima = aux2;
         }
-        Celula aux2 = aux.proxima;
-        aux.proxima = new Celula();
-        aux.proxima.item = o;
-        aux.proxima.proxima = aux2;
     }
-    
     
     //Algoritimo para remover o item na lista.
     public E remove(E o){
@@ -71,16 +72,18 @@ public class ListaEncadeada<E> {
     } 
     
     //Algoritimo para procura um item na lista
-    public boolean search(E o){
+    public int search(E o){
         Celula aux = primeiro;
+        int i = -1;
         while(aux.proxima != null){
+            i++;
             if(aux.proxima.item.equals(o)){
-                return true;
+                return i;
             }else{
                 aux = aux.proxima;
             }
         }
-        return false;
+        return -1;
     }
     //Verificar se a lista esta vazia.
     public boolean isEmpty(){
