@@ -51,8 +51,8 @@ public class ListaArranjo {
             aux[i]=this.item[i];
        }
        item = aux;
-       for(int i=ultimo; i<ultimo;i++){
-           item[i] = item[i+1];
+       for(int i=ultimo; i>p;i--){
+           item[i] = item[i-1];
        }
        ultimo = ultimo+1;
        item[p] = o;
