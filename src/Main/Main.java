@@ -26,8 +26,8 @@ public class Main {
         String a2;
         String a3;
         
-        //ListaArranjo l = new ListaArranjo(6);
-        ListaEncadeada l = new ListaEncadeada();
+        ListaArranjo l = new ListaArranjo(6);
+        //ListaEncadeada l = new ListaEncadeada();
         
         a = "Atelus";
         a1 = "Brou";
