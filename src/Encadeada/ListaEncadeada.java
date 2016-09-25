@@ -14,7 +14,7 @@ public class ListaEncadeada<E> {
         this.ultimo = primeiro;
     }
     
-    //Algoritimo para adicionar item na lista.
+    //Algoritimo para adicionar item no final lista.
     public void add(E o){
         ultimo.proxima = new Celula();
         ultimo = ultimo.proxima;
@@ -36,12 +36,12 @@ public class ListaEncadeada<E> {
         }
     }
     
-    /*Em desenvolvimento*/
+    //Algoritimo para adicionar um elemento no inicio da lista.
     public void addFirst(E o){
         Celula aux = new Celula();
         aux.item = o;
-        aux = primeiro.proxima;
-        primeiro = aux;
+        aux.proxima = primeiro.proxima;
+        primeiro.proxima = aux;
     }
     
     //Algoritimo para remover o item na lista.
@@ -79,12 +79,12 @@ public class ListaEncadeada<E> {
        return null;
     } 
     
+    //Algoritimo para remover o elemento no começo da lista.
     public E removeFirst(){
         E aux = (E) primeiro.item;
         primeiro = primeiro.proxima;
         return aux;
     }
-
     
     //Algoritimo para procura um item na lista
     public int search(E o){
@@ -99,6 +99,11 @@ public class ListaEncadeada<E> {
             }
         }
         return -1;
+    }
+    
+    //Algoritimo para exibir o primeiro item da lista
+    public E first(){
+        return (E) primeiro.proxima.item;
     }
     //Verificar se a lista esta vazia.
     public boolean isEmpty(){
@@ -130,6 +135,8 @@ public class ListaEncadeada<E> {
             System.out.println("------------");
             aux = aux.proxima;
         }
-        System.out.println("--------------------");
+        System.out.println("===========Fim de exibição=========");
+        
     }
+  
 }
