@@ -3,15 +3,15 @@ package Main;
 
 import Arranjo.ListaArranjo;
 import Encadeada.ListaEncadeada;
-
+import FilaArranjo.FilaArranjo;
+import FilaEncadeada.FilaEncadeada;
+import PilhaArranjo.PilhaArranjo;
+import PilhaEncadeada.PilhaEncadeada;
 /**
  *
  * @author marking
  */
 
- 
-
-import Encadeada.ListaEncadeada;
 
 
 
@@ -21,51 +21,78 @@ import Encadeada.ListaEncadeada;
  */
 public class Main {
     public static void main(String[] args) {
-        String a;
-        String a1;
-        String a2;
-        String a3;
-        
+        String a = "Atelus";
+        String a1 = "Brou";
+        String a2 = "Marcos";
+        String a3 = "Yuri";
+
+        /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
-        //ListaEncadeada l = new ListaEncadeada();
+        l.add(a);
+        l.add(a1);
+        l.add(a2);
+        l.add(a3);
+        l.imprimir();
+        l.remove(2);
+        l.imprimir();
+        */
         
-        a = "Atelus";
-        a1 = "Brou";
-        a2 = "Marcos";
-        a3 = "Yuri";
+        
+         /*Teste Pilha Arranjo
+        PilhaArranjo p = new PilhaArranjo(10);
+        
+        p.push(a);
+        p.push(a1);
+        p.push(a2);
+        p.push(a3);
+        p.pop();
+        p.pop();
+        p.imprimir();
+        */
+        /*Teste lista encadeada
+        FilaArranjo fa = new FilaArranjo(10);
+        fa.add(a);
+        fa.add(a1);
+        fa.add(a2);
+        fa.add(a3);
+        fa.imprimir();
+        fa.remove();
+        fa.imprimir();
+         */
+         
+        /*Teste lista encadeada
+        ListaEncadeada l = new ListaEncadeada();
         
         l.add(a);
         l.add(a1);
         l.add(a2);
         l.add(a3);
-        l.add(a);
-        l.add(a2);
-        l.add(a3, 3);
         l.imprimir();
-        l.add(a1, 1);
+       */
+       
+        /*Teste Fila encadeada
+        FilaEncadeada f = new FilaEncadeada();
         
-        
-        System.out.println(l.search(a1));
-        
-         
-        //l.remove(0);
-        
-        l.imprimir();
-        
-        l.remove(a);
-        //l.remove(a1);
-        //l.remove(a2);
-        
-        //System.out.println(l.size());
-        /*System.out.println("removido "+l.remove(a1));
+        f.add(a);
+        f.add(a1);
+        f.add(a2);
+        f.add(a3);
+        f.exibir();
+        f.remove();
+        f.exibir();
         */
-        //l.imprimi();
-        /*
         
-        System.out.println("removido "+l.remove(2));
-        l.imprimi();
+       
+        /*Teste Pilha Encadeada
+        PilhaEncadeada pe = new PilhaEncadeada();
         
-        l.removeplus(a);
+        pe.push(a);
+        pe.push(a1);
+        pe.push(a2);
+        pe.push(a3);
+        pe.exibir();
+        pe.pop();
+        pe.exibir();
         */
     }
 }
