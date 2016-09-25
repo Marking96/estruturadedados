@@ -36,6 +36,14 @@ public class ListaEncadeada<E> {
         }
     }
     
+    /*Em desenvolvimento*/
+    public void addFirst(E o){
+        Celula aux = new Celula();
+        aux.item = o;
+        aux = primeiro.proxima;
+        primeiro = aux;
+    }
+    
     //Algoritimo para remover o item na lista.
     public E remove(E o){
         Celula aux = primeiro;
@@ -70,6 +78,13 @@ public class ListaEncadeada<E> {
        }
        return null;
     } 
+    
+    public E removeFirst(){
+        E aux = (E) primeiro.item;
+        primeiro = primeiro.proxima;
+        return aux;
+    }
+
     
     //Algoritimo para procura um item na lista
     public int search(E o){
@@ -115,5 +130,6 @@ public class ListaEncadeada<E> {
             System.out.println("------------");
             aux = aux.proxima;
         }
+        System.out.println("--------------------");
     }
 }
