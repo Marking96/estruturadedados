@@ -62,12 +62,13 @@ public class Main {
          
         /*Teste lista encadeada
         ListaEncadeada l = new ListaEncadeada();
-        
+        int a4 = 1234;
         l.add(a);
         l.add(a1);
         l.add(a2);
         l.add(a3);
-        l.imprimir();
+        l.add(a4);
+        System.out.println(l);
        */
        
         /*Teste Fila encadeada
@@ -83,7 +84,7 @@ public class Main {
         */
         
        
-        /*Teste Pilha Encadeada
+        /*Teste Pilha Encadeada*/
         PilhaEncadeada pe = new PilhaEncadeada();
         
         pe.push(a);
@@ -93,7 +94,7 @@ public class Main {
         pe.exibir();
         pe.pop();
         pe.exibir();
-        */
+        
     }
 }
    
