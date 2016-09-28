@@ -133,10 +133,31 @@ public class ListaEncadeada<E> {
         while(aux.proxima != null){
             System.out.println(aux.proxima.item);
             System.out.println("------------");
-            aux = aux.proxima;
+            aux = aux.proxima;  
         }
         System.out.println("===========Fim de exibição=========");
-        
+       
     }
-  
+    
+    @Override
+    public String toString(){
+        if(isEmpty()){
+            return "[]";
+        }
+        StringBuilder builder = new StringBuilder("[");
+        Celula<E> x = primeiro.proxima;
+      
+        while(x != null){
+          
+        builder.append(x.item);
+            builder.append(",");
+         x = x.proxima;
+              
+        }
+        
+       builder.append("]");
+       
+       return builder.toString();
+    }
 }
+
