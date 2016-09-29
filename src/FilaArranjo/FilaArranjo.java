@@ -80,4 +80,22 @@ public class FilaArranjo<E> {
         }
         System.out.println("--------------------");
     }
+    @Override
+    public String toString(){
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        for (int i = 0; i < nrElementos(); i++) {
+            if (item[i] != null) {
+            s.append(item[i]);
+            s.append(" , ");
+            }
+        }
+        if (nrElementos()>0) {
+            s.append(item[(nrElementos())]); 
+        }
+        s.append("]");
+        
+        return s.toString();
+    }
 }
