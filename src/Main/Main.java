@@ -49,7 +49,7 @@ public class Main {
         p.pop();
         p.imprimir();
         */
-        /*Teste lista encadeada
+        /*Teste fila Arranjo*/
         FilaArranjo fa = new FilaArranjo(10);
         fa.add(a);
         fa.add(a1);
@@ -58,9 +58,10 @@ public class Main {
         fa.imprimir();
         fa.remove();
         fa.imprimir();
-         */
+         System.out.println("intem"+fa.nrElementos());
+         System.out.println(fa);
          
-        /*Teste lista encadeada
+        /*Teste lista encadeada 
         ListaEncadeada l = new ListaEncadeada();
         int a4 = 1234;
         l.add(a);
@@ -69,7 +70,9 @@ public class Main {
         l.add(a3);
         l.add(a4);
         System.out.println(l);
-       */
+        l.remove(3);
+        System.out.println(l);
+      */
        
         /*Teste Fila encadeada
         FilaEncadeada f = new FilaEncadeada();
@@ -84,7 +87,7 @@ public class Main {
         */
         
        
-        /*Teste Pilha Encadeada*/
+        /*Teste Pilha Encadeada
         PilhaEncadeada pe = new PilhaEncadeada();
         
         pe.push(a);
@@ -94,7 +97,7 @@ public class Main {
         pe.exibir();
         pe.pop();
         pe.exibir();
-        
+        */
     }
 }
    
