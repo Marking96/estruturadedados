@@ -6,7 +6,7 @@ package Trabalho1;
  * @author marking
  */
 public class teste {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Aluno a1 = new Aluno();
         Aluno a2 = new Aluno();
         Lista lista = new Lista();
@@ -30,5 +30,5 @@ public class teste {
         lista.add(a2);
         
         System.out.println(lista.calculaNotaF("B"));
-    }
+    }*/
 }

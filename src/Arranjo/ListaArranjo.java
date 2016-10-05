@@ -199,4 +199,21 @@ public class ListaArranjo<E> {
         }
         System.out.println("==========Fim da exibição========");
     } 
+    
+    @Override
+    public String toString(){
+         StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        for (int i = 0; i < ultimo; i++) {
+            if(item[i]!= null){
+            s.append(item[i]);
+            s.append(" ");
+            }
+        }
+       
+        s.append("]");
+        
+        return s.toString();
+    }
 }

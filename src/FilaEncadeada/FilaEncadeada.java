@@ -20,12 +20,12 @@ public class FilaEncadeada <E>{
     }
     
     //Adicionar elemento na fila 
-    public void add(E o){
+    public void enfileira(E o){
         lista.add(o);
     }
     
     //remover elemento da fila
-    public E remove(){
+    public E desenfileira(){
         return lista.removeFirst();
     }
     

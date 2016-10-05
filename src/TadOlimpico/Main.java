@@ -6,7 +6,7 @@ package TadOlimpico;
  * @author marking
  */
 public class Main {
-    public static void main(String[] args) {
+  /* public static void main(String[] args) {
          Atleta a1 = new Atleta();
         TiroEsportivo t = new TiroEsportivo();
         Partidas p = new Partidas();
@@ -23,7 +23,7 @@ public class Main {
        
        p.imprimir();
        
-    }
+    }*/
     
     
 }

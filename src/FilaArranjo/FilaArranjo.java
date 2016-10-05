@@ -17,7 +17,7 @@ public class FilaArranjo<E> {
         this.tamanho = tamanho;
     }
 
-    public void add(E o) {
+    public void enfileira(E o) {
         if ((tras + 1) % tamanho == frente) {
             redimencionar();
             item[tras] = o;
@@ -28,7 +28,7 @@ public class FilaArranjo<E> {
         }
     }
 
-    public E remove() {
+    public E desenfileira() {
         E aux = null;
         if (vazio()) {
             return null;
@@ -36,6 +36,9 @@ public class FilaArranjo<E> {
         aux = item[frente];
         item[frente] = null;
         frente = (frente + 1) % tamanho;
+        if(tras == tamanho/2){
+            reduzirCapacidade();
+        }
         return aux;
     }
 

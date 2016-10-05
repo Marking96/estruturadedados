@@ -43,7 +43,13 @@ public class PilhaArranjo<E> {
            lista.imprimirReveso();
         }
         
-    }       
+    }  
+    @Override
+    public String toString(){
+        StringBuilder s = new StringBuilder();
+        s.append(lista);
+        return s.toString();
+    }
             
   
     

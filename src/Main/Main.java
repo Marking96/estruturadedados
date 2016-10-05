@@ -5,6 +5,8 @@ import Arranjo.ListaArranjo;
 import Encadeada.ListaEncadeada;
 import FilaArranjo.FilaArranjo;
 import FilaEncadeada.FilaEncadeada;
+import Inversão.Inversao;
+
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
 /**
@@ -35,6 +37,7 @@ public class Main {
         l.imprimir();
         l.remove(2);
         l.imprimir();
+        System.out.println(l);
         */
         
         
@@ -48,18 +51,21 @@ public class Main {
         p.pop();
         p.pop();
         p.imprimir();
+        //System.out.println(p);
         */
-        /*Teste fila Arranjo*/
-        FilaArranjo fa = new FilaArranjo(10);
-        fa.add(a);
-        fa.add(a1);
-        fa.add(a2);
-        fa.add(a3);
+        /*Teste fila Arranjo
+        FilaArranjo fa = new FilaArranjo(2);
+        fa.enfileira(a);
+        fa.enfileira(a1);
+        fa.enfileira(a2);
+        fa.enfileira(a3);
+        
         fa.imprimir();
-        fa.remove();
+        fa.desenfileira();
+        System.out.println("Apos remover: ");
         fa.imprimir();
-         System.out.println("intem"+fa.nrElementos());
          System.out.println(fa);
+        */
          
         /*Teste lista encadeada 
         ListaEncadeada l = new ListaEncadeada();
@@ -77,12 +83,12 @@ public class Main {
         /*Teste Fila encadeada
         FilaEncadeada f = new FilaEncadeada();
         
-        f.add(a);
-        f.add(a1);
-        f.add(a2);
-        f.add(a3);
+        f.enfileira(a);
+        f.enfileira(a1);
+        f.enfileira(a2);
+        f.enfileira(a3);
         f.exibir();
-        f.remove();
+        f.desenfileira();
         f.exibir();
         */
         
@@ -98,6 +104,11 @@ public class Main {
         pe.pop();
         pe.exibir();
         */
+        
+       /*Teste Inverte Frase*/ 
+        String test = "O fortaleza empatou";
+        Inversao i = new Inversao(test);
+        i.inverte();
     }
 }
    
