@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Inversão;
 
 import PilhaArranjo.PilhaArranjo;
-import java.util.StringTokenizer;
+
 
 /**
  *
@@ -24,7 +20,7 @@ public class Inversao{
     }
     
     public void inverte(){
-       //StringTokenizer token = new StringTokenizer(text, " ");
+       
        fr=text.split(" ");
         for (int i = fr.length-1; i > -1; i--) {
             if(fr[i] != null){
