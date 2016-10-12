@@ -17,6 +17,9 @@ public class PilhaArranjo<E> {
         this.lista = new ListaArranjo<>(tamanho);
         this.tamanho = tamanho;
     }
+
+    public PilhaArranjo() {
+    }
     
     //Verificar se a pilha esta vazia;
     public boolean isEmpty(){
