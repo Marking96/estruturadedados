@@ -2,6 +2,7 @@
 package Main;
 
 import Arranjo.ListaArranjo;
+import CalculadoraPolonesa.CalculadoraPolonesa;
 import Encadeada.ListaEncadeada;
 import FilaArranjo.FilaArranjo;
 import FilaEncadeada.FilaEncadeada;
@@ -9,6 +10,7 @@ import Inversão.Inversao;
 
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
+import ThreeSum.ThreeSum;
 /**
  *
  * @author marking
@@ -22,7 +24,7 @@ import PilhaEncadeada.PilhaEncadeada;
  * @author marking
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String a = "Atelus";
         String a1 = "Brou";
         String a2 = "Marcos";
@@ -37,6 +39,7 @@ public class Main {
         l.imprimir();
         l.remove(2);
         l.imprimir();
+        System.out.println(l.length());
         System.out.println(l);
         */
         
@@ -105,11 +108,23 @@ public class Main {
         pe.exibir();
         */
         
-       /*Teste Inverte Frase*/ 
+       /*Teste Inverte Frase 
         String test = "O fortaleza empatou";
         Inversao i = new Inversao(test);
-        i.inverte();
-    }
+        i.inverte();*/
+       
+       /*teste calculadora polonesa
+       CalculadoraPolonesa c = new CalculadoraPolonesa();
+       String exp = "224+*2/";
+       c.obterExpressao(exp);
+       */
+       
+       /*Teste Analise
+       ThreeSum sum = new ThreeSum(16000);
+       sum.addLista();
+       sum.calcula();
+       */
+     }
 }
    
 
