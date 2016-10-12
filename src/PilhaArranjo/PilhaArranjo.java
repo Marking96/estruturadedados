@@ -19,6 +19,7 @@ public class PilhaArranjo<E> {
     }
 
     public PilhaArranjo() {
+        this.lista = new ListaArranjo<>(100);
     }
     
     //Verificar se a pilha esta vazia;
@@ -44,9 +45,13 @@ public class PilhaArranjo<E> {
     public void imprimir(){
         if(!isEmpty()){
            lista.imprimirReveso();
-        }
-        
+        }  
     }  
+    
+    public int length(){
+      return lista.length();
+    } 
+    
     @Override
     public String toString(){
         StringBuilder s = new StringBuilder();
