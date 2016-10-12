@@ -173,11 +173,7 @@ public class ListaArranjo<E> {
     }
     
     public int length(){
-        int aux = 0;
-        for (int i = 0; i < ultimo-1; i++) {
-            aux++; 
-        }
-        return aux;
+        return ultimo;
     }
     
     //algoritimo para imprimir
