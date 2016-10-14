@@ -81,8 +81,8 @@ public class ListaEncadeada<E> {
     
     //Algoritimo para remover o elemento no começo da lista.
     public E removeFirst(){
-        E aux = (E) primeiro.item;
-        primeiro = primeiro.proxima;
+        E aux = (E) primeiro.proxima.item;
+        primeiro.proxima = primeiro.proxima.proxima;
         return aux;
     }
     
