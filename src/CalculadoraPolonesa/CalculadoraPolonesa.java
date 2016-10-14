@@ -69,20 +69,25 @@ public class CalculadoraPolonesa<E> {
         }
         //numeros.exibir();
         //operacoes.exibir();
-        if(operacoes.size()+2 == numeros.size()){
-            throw new Exception("Erro quantidade de numeros maior que a de operadores!");
-        }else{
-            while(operacoes.size() != 0 && numeros.size()!= 1){
-            //System.out.println("fhfdhfdh "+operacoes.pop());
-                Character operadores = operacoes.pop();
-                Integer numero1 = numeros.pop();
-                Integer numero2 = numeros.pop();
+        try{
+            if(operacoes.size()+2 == numeros.size()){
+                throw new Exception("Erro quantidade de numeros maior que a de operadores! Expressão Invalida");
+            }else{
+                while(operacoes.size() != 0 && numeros.size()!= 1){
+                    Character operadores = operacoes.pop();
+                    Integer numero1 = numeros.pop();
+                    Integer numero2 = numeros.pop();
            
-                numeros.push(calculo(operadores, numero1, numero2));
+                    numeros.push(calculo(operadores, numero1, numero2));
             
+                }
+                numeros.exibir();
+            }
         }
+        catch(Exception e){
+            System.out.println(e.getMessage());
         }
-        numeros.exibir();
+        
         
     }
     
