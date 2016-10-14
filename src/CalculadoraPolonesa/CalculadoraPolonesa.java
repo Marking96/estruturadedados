@@ -2,6 +2,7 @@
 package CalculadoraPolonesa;
 
 import PilhaArranjo.PilhaArranjo;
+import PilhaEncadeada.PilhaEncadeada;
 
 /**
  *
@@ -9,12 +10,12 @@ import PilhaArranjo.PilhaArranjo;
  */
 public class CalculadoraPolonesa<E> {
     
-    private PilhaArranjo<Integer> numeros;
-    private PilhaArranjo<Character> operações;
+    private PilhaEncadeada<Integer> numeros;
+    private PilhaEncadeada<Character> operacoes;
 
     public CalculadoraPolonesa() {
-        this.numeros = new PilhaArranjo<>();
-        this.operações = new PilhaArranjo<>();
+        this.numeros = new PilhaEncadeada<>();
+        this.operacoes = new PilhaEncadeada<>();
     }
     
     public void obterExpressao(String expressao) throws Exception{
@@ -39,7 +40,7 @@ public class CalculadoraPolonesa<E> {
                 case'5':
                     numeros.push(5);
                     break;
-                 case'6':
+                case'6':
                     numeros.push(6);
                     break;
                 case'7':
@@ -53,28 +54,31 @@ public class CalculadoraPolonesa<E> {
                     break;
             /*Operadores*/
                    case'+':
-                    operações.push(expressao.charAt(i));
+                    operacoes.push(expressao.charAt(i));
                     break; 
                    case'-':
-                    operações.push(expressao.charAt(i));
+                    operacoes.push(expressao.charAt(i)); 
                     break;
                    case'*':
-                    operações.push(expressao.charAt(i));
+                    operacoes.push(expressao.charAt(i));
                     break;
                    case'/':
-                    operações.push(expressao.charAt(i));
+                    operacoes.push(expressao.charAt(i));
                     break;
             }
         }
-        while(operações.length() != 0 && numeros.length()!= 1){
-            Character opradores = operações.pop();
+        //numeros.exibir();
+        //operacoes.exibir();
+        while(operacoes.size() != 0 || numeros.size()!= 1){
+            //System.out.println("fhfdhfdh "+operacoes.pop());
+            Character operadores = operacoes.pop();
             Integer numero1 = numeros.pop();
             Integer numero2 = numeros.pop();
             
-            numeros.push(calculo(opradores, numero1, numero2));
+            numeros.push(calculo(operadores, numero1, numero2));
             
         } 
-        System.out.println(numeros);
+        numeros.exibir();
     }
     
     public int calculo(Character ope,Integer num1,Integer num2) throws Exception{

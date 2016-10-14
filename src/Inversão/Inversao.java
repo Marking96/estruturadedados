@@ -16,7 +16,7 @@ public class Inversao{
     public Inversao(String text) {
         this.text = text;
         this.p1 = new PilhaArranjo(10);
-        this.fr = new String[10];
+        this.fr = new String[100];
     }
     
     public void inverte(){
