@@ -42,4 +42,11 @@ public class PilhaEncadeada <E>{
     public int size(){
         return lista.size();
     }
+    
+    @Override
+    public String toString(){
+        StringBuilder s = new StringBuilder();
+        s.append(lista);
+        return s.toString();
+    }
 }

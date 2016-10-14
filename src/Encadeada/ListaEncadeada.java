@@ -132,7 +132,7 @@ public class ListaEncadeada<E> {
         aux = primeiro;
         while(aux.proxima != null){
             System.out.println(aux.proxima.item);
-            System.out.println("------------");
+            
             aux = aux.proxima;  
         }
         System.out.println("===========Fim de exibição=========");
