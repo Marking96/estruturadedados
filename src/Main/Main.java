@@ -115,7 +115,7 @@ public class Main {
        
        /*teste calculadora polonesa*/
        CalculadoraPolonesa c = new CalculadoraPolonesa();
-       String exp = "224+*2/";
+       String exp = "224*2/";
        c.obterExpressao(exp);
        
        

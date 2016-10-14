@@ -69,7 +69,7 @@ public class CalculadoraPolonesa<E> {
         }
         //numeros.exibir();
         //operacoes.exibir();
-        while(operacoes.size() != 0 || numeros.size()!= 1){
+        while(operacoes.size() != 0 && numeros.size()!= 1){
             //System.out.println("fhfdhfdh "+operacoes.pop());
             Character operadores = operacoes.pop();
             Integer numero1 = numeros.pop();
