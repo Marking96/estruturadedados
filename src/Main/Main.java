@@ -113,11 +113,11 @@ public class Main {
         Inversao i = new Inversao(test);
         i.inverte();*/
        
-       /*teste calculadora polonesa
+       /*teste calculadora polonesa*/
        CalculadoraPolonesa c = new CalculadoraPolonesa();
        String exp = "224+*2/";
        c.obterExpressao(exp);
-       */
+       
        
        /*Teste Analise
        ThreeSum sum = new ThreeSum(16000);

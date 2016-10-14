@@ -38,4 +38,8 @@ public class PilhaEncadeada <E>{
     public void exibir(){
         lista.imprimir();
     }
+    
+    public int size(){
+        return lista.size();
+    }
 }
