@@ -1,29 +1,29 @@
-
 package Main;
 
 import Arranjo.ListaArranjo;
+import Calculadora.Calculadora;
 import CalculadoraPolonesa.CalculadoraPolonesa;
 import Encadeada.ListaEncadeada;
 import FilaArranjo.FilaArranjo;
 import FilaEncadeada.FilaEncadeada;
 import Inversão.Inversao;
+import MdcRecursão.Mdc;
 
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
 import ThreeSum.ThreeSum;
+
 /**
  *
  * @author marking
  */
-
-
-
 
 /**
  *
  * @author marking
  */
 public class Main {
+
     public static void main(String[] args) throws Exception {
         String a = "Atelus";
         String a1 = "Brou";
@@ -41,10 +41,8 @@ public class Main {
         l.imprimir();
         System.out.println(l.length());
         System.out.println(l);
-        */
-        
-        
-         /*Teste Pilha Arranjo
+         */
+ /*Teste Pilha Arranjo
         PilhaArranjo p = new PilhaArranjo(10);
         
         p.push(a);
@@ -55,8 +53,8 @@ public class Main {
         p.pop();
         p.imprimir();
         //System.out.println(p);
-        */
-        /*Teste fila Arranjo
+         */
+ /*Teste fila Arranjo
         FilaArranjo fa = new FilaArranjo(2);
         fa.enfileira(a);
         fa.enfileira(a1);
@@ -68,9 +66,8 @@ public class Main {
         System.out.println("Apos remover: ");
         fa.imprimir();
          System.out.println(fa);
-        */
-         
-        /*Teste lista encadeada 
+         */
+ /*Teste lista encadeada 
         ListaEncadeada l = new ListaEncadeada();
         int a4 = 1234;
         l.add(a);
@@ -81,9 +78,8 @@ public class Main {
         System.out.println(l);
         l.remove(3);
         System.out.println(l);
-      */
-       
-        /*Teste Fila encadeada
+         */
+ /*Teste Fila encadeada
         FilaEncadeada f = new FilaEncadeada();
         
         f.enfileira(a);
@@ -93,10 +89,8 @@ public class Main {
         f.exibir();
         f.desenfileira();
         f.exibir();
-        */
-        
-       
-        /*Teste Pilha Encadeada
+         */
+ /*Teste Pilha Encadeada
         PilhaEncadeada pe = new PilhaEncadeada();
         
         pe.push(a);
@@ -106,25 +100,30 @@ public class Main {
         pe.exibir();
         pe.pop();
         pe.exibir();
-        */
-        
-       /*Teste Inverte Frase 
+         */
+ /*Teste Inverte Frase 
         String test = "O fortaleza empatou";
         Inversao i = new Inversao(test);
         i.inverte();*/
-       
-       /*teste calculadora polonesa*/
+ /*teste calculadora polonesa 
        CalculadoraPolonesa c = new CalculadoraPolonesa();
-       String exp = "224+*2/";
+       String exp = "224+*2/34";
        c.obterExpressao(exp);
-       
-       
-       /*Teste Analise
+         */
+  /*teste calculadora polonesa
+       Calculadora ca = new Calculadora();
+       String exp = "(2+2)";
+       ca.obterExpressao(exp);
+         */
+ /*Teste Analise
        ThreeSum sum = new ThreeSum(16000);
        sum.addLista();
        sum.calcula();
-       */
-     }
-}
-   
+         */
+ /*MDC Recursivo
+        Mdc m = new Mdc();
+        System.out.println(m.calculaMdc(4032, 1272));
+*/
+    }
 
+}

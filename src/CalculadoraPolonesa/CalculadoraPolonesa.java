@@ -70,7 +70,7 @@ public class CalculadoraPolonesa<E> {
         //numeros.exibir();
         //operacoes.exibir();
         try{
-            if(operacoes.size()+2 == numeros.size()){
+            if(operacoes.size()+2 <= numeros.size()){
                 throw new Exception("Erro quantidade de numeros maior que a de operadores! Expressão Invalida");
             }else{
                 while(operacoes.size() != 0 && numeros.size()!= 1){
