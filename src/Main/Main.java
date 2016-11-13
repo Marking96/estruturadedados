@@ -1,6 +1,7 @@
 package Main;
 
 import Arranjo.ListaArranjo;
+import BuscaBinaria.BuscaBinaria;
 import Calculadora.Calculadora;
 import CalculadoraPolonesa.CalculadoraPolonesa;
 import Encadeada.ListaEncadeada;
@@ -12,6 +13,7 @@ import MdcRecursão.Mdc;
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
 import ThreeSum.ThreeSum;
+import TorreHanoi.Hanoi;
 
 /**
  *
@@ -29,7 +31,8 @@ public class Main {
         String a1 = "Brou";
         String a2 = "Marcos";
         String a3 = "Yuri";
-
+        int[] vetor = {250,500,1000,2000,4000,8000,16000};
+        
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
         l.add(a);
@@ -120,10 +123,22 @@ public class Main {
        sum.addLista();
        sum.calcula();
          */
- /*MDC Recursivo
+/*MDC Recursivo*/
         Mdc m = new Mdc();
-        System.out.println(m.calculaMdc(4032, 1272));
-*/
+        System.out.println(m.calculaMdc(12, 6));
+
+ 
+        /* BuscaBinaria busca = new BuscaBinaria();
+        System.out.println("Busca binaria: "+ busca.buscaBinaria(vetor,250, 0, vetor.length));*/
+    
+    /*HAnoi
+        Hanoi h = new Hanoi();
+        h.hanoi(3, "torre 1", "torre 2", "torre 3");
+    */
+    
     }
+    
+    
+   
 
 }

@@ -12,10 +12,12 @@ public class Mdc {
     }
 
     public int calculaMdc(int a, int b) {
-        if (a <= b || a % b == 0) {
-            return b;
-        } else if (a < b) 
-                return calculaMdc(a, b);
+        if (b>a) {
+            return calculaMdc(b, a);
+        }
+        if(b == 0){
+            return  a;
+        }
         else 
             return calculaMdc(b, a % b);
     }
