@@ -9,11 +9,13 @@ import FilaArranjo.FilaArranjo;
 import FilaEncadeada.FilaEncadeada;
 import Inversão.Inversao;
 import MdcRecursão.Mdc;
+import Ordenação.HeapSort.HeapSort;
 
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
 import ThreeSum.ThreeSum;
 import TorreHanoi.Hanoi;
+import testes.geradorNumeros;
 
 /**
  *
@@ -32,6 +34,7 @@ public class Main {
         String a2 = "Marcos";
         String a3 = "Yuri";
         int[] vetor = {250,500,1000,2000,4000,8000,16000};
+        int [] v = {1000,500,250,2000,16000,8000,4000};
         
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
@@ -123,22 +126,30 @@ public class Main {
        sum.addLista();
        sum.calcula();
          */
-/*MDC Recursivo*/
+/*MDC Recursivo
         Mdc m = new Mdc();
         System.out.println(m.calculaMdc(12, 6));
 
- 
-        /* BuscaBinaria busca = new BuscaBinaria();
+ */
+/* BuscaBinaria 
+        busca = new BuscaBinaria();
         System.out.println("Busca binaria: "+ busca.buscaBinaria(vetor,250, 0, vetor.length));*/
     
-    /*HAnoi
+/*HAnoi
         Hanoi h = new Hanoi();
         h.hanoi(3, "torre 1", "torre 2", "torre 3");
     */
-    
-    }
-    
-    
-   
+        geradorNumeros g =new geradorNumeros(v);
+        System.out.println("Antes de Ordenar: ");
+        for (int i = 0; i < v.length; i++) {
+            System.out.print("-"+v[i]);
+        }
+        HeapSort h = new HeapSort(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int i = 0; i < v.length; i++) {
+            System.out.print("-"+v[i]);
+        }
 
+
+    }
 }
