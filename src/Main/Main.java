@@ -10,9 +10,14 @@ import FilaEncadeada.FilaEncadeada;
 import Inversão.Inversao;
 import MdcRecursão.Mdc;
 import Ordenação.HeapSort.HeapSort;
-
+import Ordenação.InsertionSort.Insertion;
+import Ordenação.MergeSort.MergeSort;
+import Ordenação.QuickSort.QuickiSort;
+import Ordenação.SelectionSort.Selection;
+import Ordenação.ShellSort.Shell;
 import PilhaArranjo.PilhaArranjo;
 import PilhaEncadeada.PilhaEncadeada;
+import ThreeSum.StopWhatch;
 import ThreeSum.ThreeSum;
 import TorreHanoi.Hanoi;
 import testes.geradorNumeros;
@@ -22,10 +27,6 @@ import testes.geradorNumeros;
  * @author marking
  */
 
-/**
- *
- * @author marking
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -34,7 +35,7 @@ public class Main {
         String a2 = "Marcos";
         String a3 = "Yuri";
         int[] vetor = {250,500,1000,2000,4000,8000,16000};
-        int [] v = {1000,500,250,2000,16000,8000,4000};
+        int [] v = new int[250];
         
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
@@ -139,17 +140,57 @@ public class Main {
         Hanoi h = new Hanoi();
         h.hanoi(3, "torre 1", "torre 2", "torre 3");
     */
+/*gera numeros aleatorios*/
         geradorNumeros g =new geradorNumeros(v);
-        System.out.println("Antes de Ordenar: ");
-        for (int i = 0; i < v.length; i++) {
-            System.out.print("-"+v[i]);
-        }
+
+        StopWhatch s = new StopWhatch();
+
+/*HeapSort*/
+        s.start();
         HeapSort h = new HeapSort(v);
+        s.stop();
+        System.out.println("Tempo: "+s.getElapsedTimeSecs());
+        
         System.out.println("\nDepois de Ordenar: ");
         for (int i = 0; i < v.length; i++) {
             System.out.print("-"+v[i]);
         }
-
-
+    
+/*InsetionSort
+        Insertion i = new Insertion(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int j = 0; j < v.length; j++) {
+            System.out.print("   -   "+v[j]); 
+        }
+    */
+/*SelectionSort
+        Selection s = new Selection(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int j = 0; j < v.length; j++) {
+            System.out.print("   -   "+v[j]); 
+        }
+    */
+/*ShellSort
+        Shell sh = new Shell(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int j = 0; j < v.length; j++) {
+            System.out.print("   -   "+v[j]); 
+        }
+    */
+/*MergeSort        
+        MergeSort m = new MergeSort(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int j = 0; j < v.length; j++) {
+            System.out.print("   -   "+v[j]); 
+        }
+    */
+/*QuickSort
+     QuickiSort q = new QuickiSort(v);
+        System.out.println("\nDepois de Ordenar: ");
+        for (int j = 0; j < v.length; j++) {
+            System.out.print("   -   "+v[j]); 
+        }
+     */    
+        System.out.println("");
     }
 }
