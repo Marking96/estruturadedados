@@ -18,7 +18,7 @@ public class HeapSort {
     }
     
     private void construirMaxHeap(int[] v) {
-        for (int i = v.length / 2 - 1; i >= 0; i--)
+        for (int i = v.length ; i >= 0; i--)
             maxHeapify(v, i, v.length);
 
     }

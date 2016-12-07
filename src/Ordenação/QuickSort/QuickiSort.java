@@ -25,7 +25,8 @@ public class QuickiSort {
         while (i <= f) {            
             if (v[i] <= pivo) {
                 i++;
-            }else if (pivo < v[f]) {
+            }
+            else if (pivo < v[f]) {
                 f--;
             }
             else{

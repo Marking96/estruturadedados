@@ -1,6 +1,7 @@
 package Main;
 
 import Arranjo.ListaArranjo;
+import Arvore.Arvore;
 import BuscaBinaria.BuscaBinaria;
 import Calculadora.Calculadora;
 import CalculadoraPolonesa.CalculadoraPolonesa;
@@ -35,7 +36,7 @@ public class Main {
         String a2 = "Marcos";
         String a3 = "Yuri";
         int[] vetor = {250,500,1000,2000,4000,8000,16000};
-        int [] v = new int[250];
+        int [] v = {3,4,1,0,9};
         
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
@@ -141,11 +142,11 @@ public class Main {
         h.hanoi(3, "torre 1", "torre 2", "torre 3");
     */
 /*gera numeros aleatorios*/
-        geradorNumeros g =new geradorNumeros(v);
+        //geradorNumeros g =new geradorNumeros(v);
 
         StopWhatch s = new StopWhatch();
 
-/*HeapSort*/
+/*HeapSort*/ 
         s.start();
         HeapSort h = new HeapSort(v);
         s.stop();
@@ -153,44 +154,66 @@ public class Main {
         
         System.out.println("\nDepois de Ordenar: ");
         for (int i = 0; i < v.length; i++) {
-            System.out.print("-"+v[i]);
+            System.out.print(","+v[i]);
         }
-    
+   
 /*InsetionSort
+        s.start();
         Insertion i = new Insertion(v);
+        s.stop();
+        System.out.println("Tempo: "+s.getElapsedTimeSecs());
+        
         System.out.println("\nDepois de Ordenar: ");
         for (int j = 0; j < v.length; j++) {
-            System.out.print("   -   "+v[j]); 
+            System.out.print("   ,   "+v[j]); 
         }
-    */
+   */ 
 /*SelectionSort
-        Selection s = new Selection(v);
+        
+        Selection se = new Selection(v);
+       
+        
         System.out.println("\nDepois de Ordenar: ");
         for (int j = 0; j < v.length; j++) {
-            System.out.print("   -   "+v[j]); 
+            System.out.print("   ,   "+v[j]); 
         }
     */
 /*ShellSort
+        
         Shell sh = new Shell(v);
+         s.stop();
+        System.out.println("Tempo: "+s.getElapsedTimeSecs());
+        
         System.out.println("\nDepois de Ordenar: ");
         for (int j = 0; j < v.length; j++) {
-            System.out.print("   -   "+v[j]); 
+            System.out.print("   ,   "+v[j]); 
         }
-    */
-/*MergeSort        
+  */  
+/*MergeSort    
+        s.start();
         MergeSort m = new MergeSort(v);
+        s.stop();
+        System.out.println("Tempo: "+s.getElapsedTimeSecs());
+        
         System.out.println("\nDepois de Ordenar: ");
         for (int j = 0; j < v.length; j++) {
-            System.out.print("   -   "+v[j]); 
+            System.out.print("   ,   "+v[j]); 
         }
-    */
+ */  
 /*QuickSort
-     QuickiSort q = new QuickiSort(v);
+        s.start();
+        QuickiSort q = new QuickiSort(v);
+        s.stop();
+        System.out.println("Tempo: "+s.getElapsedTimeSecs());
+
         System.out.println("\nDepois de Ordenar: ");
         for (int j = 0; j < v.length; j++) {
-            System.out.print("   -   "+v[j]); 
+            System.out.print("   ,   "+v[j]); 
         }
-     */    
+*/         
         System.out.println("");
+        
+        //Arvore a  = new Arvore("testing");
+        
     }
 }

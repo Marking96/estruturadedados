@@ -212,4 +212,13 @@ public class ListaArranjo<E> {
         
         return s.toString();
     }
+    
+    public E getItem(int i){
+        for (int j = 0; j < ultimo-1; j++) {
+            if(i == j){
+                return item[j];
+            }
+        }
+        return null;
+    }
 }

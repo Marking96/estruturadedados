@@ -27,7 +27,13 @@ public class FilaArranjo<E> {
             tras = (tras + 1) % tamanho;
         }
     }
-
+    
+    public void enfileiratodos(E[] o){
+        for (int i = 0; i < o.length; i++) {
+            enfileira(o[i]);
+        }
+    }
+    
     public E desenfileira() {
         E aux = null;
         if (vazio()) {
