@@ -2,6 +2,9 @@ package Main;
 
 import Arranjo.ListaArranjo;
 import Arvore.Arvore;
+import Arvore.No;
+import Arvore.Binaria.ArvoreBinaria;
+import Arvore.BinariaBusca.ArvoreBinariaBusca;
 import BuscaBinaria.BuscaBinaria;
 import Calculadora.Calculadora;
 import CalculadoraPolonesa.CalculadoraPolonesa;
@@ -36,7 +39,7 @@ public class Main {
         String a2 = "Marcos";
         String a3 = "Yuri";
         int[] vetor = {250,500,1000,2000,4000,8000,16000};
-        int [] v = {3,4,1,0,9};
+        int [] v = {10,8,5,9,20,25,40,2,4,1};
         
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
@@ -146,7 +149,7 @@ public class Main {
 
         StopWhatch s = new StopWhatch();
 
-/*HeapSort*/ 
+/*HeapSort
         s.start();
         HeapSort h = new HeapSort(v);
         s.stop();
@@ -156,7 +159,7 @@ public class Main {
         for (int i = 0; i < v.length; i++) {
             System.out.print(","+v[i]);
         }
-   
+   */ 
 /*InsetionSort
         s.start();
         Insertion i = new Insertion(v);
@@ -211,9 +214,37 @@ public class Main {
             System.out.print("   ,   "+v[j]); 
         }
 */         
-        System.out.println("");
+        /*String teste = "testando";
         
-        //Arvore a  = new Arvore("testing");
+        Arvore ar = new Arvore();
+        No n1 = new No();
+        n1.setValor("a");
+        No n2 = new No();
+        n2.setValor("b");
+        No n3 = new No();
+        n2.setValor("c");
         
+        ar.inserir(n1, n2);
+        ar.inserir(n1, n3);
+        ar.show();
+        */
+        /*Avore*/
+        ArvoreBinariaBusca bina = new ArvoreBinariaBusca();
+            bina.inserir(10, 4);
+            bina.inserir(2, 7);
+            bina.inserir(11, 9);
+            
+            bina.show();
+        
+            bina.remover(2);
+            bina.show();
+        
+        /*Avore
+        ArvoreBinaria arvb = new ArvoreBinaria();     
+        for (int i = 0; i < v.length; i++) {
+            arvb.inserir(v[i]);
+        }
+        
+        arvb.show();*/
     }
 }

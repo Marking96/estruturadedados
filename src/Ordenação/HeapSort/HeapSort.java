@@ -18,13 +18,13 @@ public class HeapSort {
     }
     
     private void construirMaxHeap(int[] v) {
-        for (int i = v.length ; i >= 0; i--)
+        for (int i = v.length / 2 ; i >= 0; i--)
             maxHeapify(v, i, v.length);
 
     }
     
     private void maxHeapify(int[] v,int pos, int tamanhovetor){
-        int max = 2* pos +1, direita = max +1;
+        int max = pos +1, direita = max +1;
         if(max < tamanhovetor){
             if(direita < tamanhovetor && v[max] < v[direita])
                 max = direita;
@@ -40,6 +40,4 @@ public class HeapSort {
         v[j] = v[aposJ];
         v[aposJ] = aux;
     }
-    
-    
 }

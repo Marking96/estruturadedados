@@ -1,6 +1,8 @@
 
 package FilaEncadeada;
 
+import Arranjo.ListaArranjo;
+import Arvore.Arvore;
 import Encadeada.ListaEncadeada;
 
 /**
@@ -37,5 +39,9 @@ public class FilaEncadeada <E>{
     //exibir elementos da fila
     public void exibir(){
         lista.imprimir();
+    }
+
+    public void enfileiraAll(ListaArranjo<Arvore.No> filhas) {
+       lista.add((E) filhas);
     }
 }

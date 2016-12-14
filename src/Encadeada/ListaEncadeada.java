@@ -43,7 +43,11 @@ public class ListaEncadeada<E> {
         aux.proxima = primeiro.proxima;
         primeiro.proxima = aux;
     }
-    
+    public void add(E[] e){
+        for (int i = 0; i < e.length; i++) {
+            add(e[i]);
+        }
+    }
     //Algoritimo para remover o item na lista.
     public E remove(E o){
         Celula aux = primeiro;
