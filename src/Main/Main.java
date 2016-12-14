@@ -4,6 +4,7 @@ import Arranjo.ListaArranjo;
 import Arvore.Arvore;
 import Arvore.No;
 import Arvore.Binaria.ArvoreBinaria;
+import Arvore.Binaria.NoBina;
 import Arvore.BinariaBusca.ArvoreBinariaBusca;
 import BuscaBinaria.BuscaBinaria;
 import Calculadora.Calculadora;
@@ -30,7 +31,6 @@ import testes.geradorNumeros;
  *
  * @author marking
  */
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -38,9 +38,9 @@ public class Main {
         String a1 = "Brou";
         String a2 = "Marcos";
         String a3 = "Yuri";
-        int[] vetor = {250,500,1000,2000,4000,8000,16000};
-        int [] v = {10,8,5,9,20,25,40,2,4,1};
-        
+        int[] vetor = {250, 500, 1000, 2000, 4000, 8000, 16000};
+        int[] v = {10, 8, 5, 9, 20, 25, 40, 2, 4, 1};
+
         /*Teste Lista Arranjo
         ListaArranjo l = new ListaArranjo(6);
         l.add(a);
@@ -121,7 +121,7 @@ public class Main {
        String exp = "224+*2/34";
        c.obterExpressao(exp);
          */
-  /*teste calculadora polonesa
+ /*teste calculadora polonesa
        Calculadora ca = new Calculadora();
        String exp = "(2+2)";
        ca.obterExpressao(exp);
@@ -131,25 +131,23 @@ public class Main {
        sum.addLista();
        sum.calcula();
          */
-/*MDC Recursivo
+ /*MDC Recursivo
         Mdc m = new Mdc();
         System.out.println(m.calculaMdc(12, 6));
 
- */
-/* BuscaBinaria 
+         */
+ /* BuscaBinaria 
         busca = new BuscaBinaria();
         System.out.println("Busca binaria: "+ busca.buscaBinaria(vetor,250, 0, vetor.length));*/
-    
-/*HAnoi
+ /*HAnoi
         Hanoi h = new Hanoi();
         h.hanoi(3, "torre 1", "torre 2", "torre 3");
-    */
-/*gera numeros aleatorios*/
+         */
+ /*gera numeros aleatorios*/
         //geradorNumeros g =new geradorNumeros(v);
-
         StopWhatch s = new StopWhatch();
 
-/*HeapSort
+        /*HeapSort
         s.start();
         HeapSort h = new HeapSort(v);
         s.stop();
@@ -159,8 +157,8 @@ public class Main {
         for (int i = 0; i < v.length; i++) {
             System.out.print(","+v[i]);
         }
-   */ 
-/*InsetionSort
+         */
+ /*InsetionSort
         s.start();
         Insertion i = new Insertion(v);
         s.stop();
@@ -170,8 +168,8 @@ public class Main {
         for (int j = 0; j < v.length; j++) {
             System.out.print("   ,   "+v[j]); 
         }
-   */ 
-/*SelectionSort
+         */
+ /*SelectionSort
         
         Selection se = new Selection(v);
        
@@ -180,8 +178,8 @@ public class Main {
         for (int j = 0; j < v.length; j++) {
             System.out.print("   ,   "+v[j]); 
         }
-    */
-/*ShellSort
+         */
+ /*ShellSort
         
         Shell sh = new Shell(v);
          s.stop();
@@ -191,8 +189,8 @@ public class Main {
         for (int j = 0; j < v.length; j++) {
             System.out.print("   ,   "+v[j]); 
         }
-  */  
-/*MergeSort    
+         */
+ /*MergeSort    
         s.start();
         MergeSort m = new MergeSort(v);
         s.stop();
@@ -202,8 +200,8 @@ public class Main {
         for (int j = 0; j < v.length; j++) {
             System.out.print("   ,   "+v[j]); 
         }
- */  
-/*QuickSort
+         */
+ /*QuickSort
         s.start();
         QuickiSort q = new QuickiSort(v);
         s.stop();
@@ -213,8 +211,8 @@ public class Main {
         for (int j = 0; j < v.length; j++) {
             System.out.print("   ,   "+v[j]); 
         }
-*/         
-        /*String teste = "testando";
+         */
+ /*String teste = "testando";
         
         Arvore ar = new Arvore();
         No n1 = new No();
@@ -227,8 +225,8 @@ public class Main {
         ar.inserir(n1, n2);
         ar.inserir(n1, n3);
         ar.show();
-        */
-        /*Avore*/
+         */
+ /*Avore
         ArvoreBinariaBusca bina = new ArvoreBinariaBusca();
             bina.inserir(10, 4);
             bina.inserir(2, 7);
@@ -236,15 +234,34 @@ public class Main {
             
             bina.show();
         
-            bina.remover(2);
+            //bina.remover(2);
             bina.show();
+            System.out.println(bina.buscaProfundidade(9));*/
+ /*Avore*/
+        ArvoreBinaria arvb = new ArvoreBinaria();
+        NoBina q = arvb.criarAvore(10);
+        NoBina no1 = new NoBina();
+        no1.setValor(9);
+        NoBina no2 = new NoBina();
+        no2.setValor(7);
         
-        /*Avore
-        ArvoreBinaria arvb = new ArvoreBinaria();     
-        for (int i = 0; i < v.length; i++) {
-            arvb.inserir(v[i]);
-        }
+        NoBina r = arvb.criarAvore(8);
+        NoBina t = arvb.criarAvore(7);
+        NoBina y = arvb.criarAvore(6);
         
-        arvb.show();*/
+        arvb.inserirEsquerdo(q, no1);
+        arvb.inserDireta(q, no2);
+        arvb.inserirEsquerdo(no1, r);
+        arvb.inserDireta(no1, t);
+        arvb.inserirEsquerdo(no2, y);
+        
+        
+        arvb.show(q);
+        System.out.println("");
+        //arvb.removeEsquerda(no1);
+        arvb.show(q);
+        System.out.println(arvb.buscaProfundidade(q, 9));
+       // 
+        
     }
 }

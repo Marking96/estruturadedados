@@ -41,7 +41,5 @@ public class FilaEncadeada <E>{
         lista.imprimir();
     }
 
-    public void enfileiraAll(ListaArranjo<Arvore.No> filhas) {
-       lista.add((E) filhas);
-    }
+    
 }

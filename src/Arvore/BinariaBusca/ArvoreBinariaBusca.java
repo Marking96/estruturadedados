@@ -6,6 +6,7 @@
 package Arvore.BinariaBusca;
 
 import Arvore.BinariaBusca.No;
+import PilhaEncadeada.PilhaEncadeada;
 
 /**
  *
@@ -115,8 +116,27 @@ public class ArvoreBinariaBusca {
         if (no != null) {
 
             prefixa(no.getEsquerda());
+            System.out.println("");
             System.out.print(no.getValor() + ",");
             prefixa(no.getDireita());
         }
+    }
+    
+    public boolean buscaProfundidade(int valor){
+        PilhaEncadeada pilha = new PilhaEncadeada();
+        No aux;
+        pilha.push(raiz);
+        while(!pilha.isEmpty()){
+            aux = (No) pilha.pop();
+            if(aux.getValor() == valor){
+                return true;
+            }
+            else if(aux.getEsquerda()!= null){
+                pilha.push(aux.getEsquerda());
+            }else if(aux.getEsquerda() != null){
+                pilha.push(aux.getDireita());
+            }
+        }
+        return false;
     }
 }
